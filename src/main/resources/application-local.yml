@@ -1,0 +1,55 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 4
+    web:
+      database-platform: org.hibernate.dialect.OracleDialect
+      driver-class-name: oracle.jdbc.OracleDriver
+      url: jdbc:oracle:thin:localhost:1521:XE
+      username: LOGIN
+      password: 1111
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type: DEBUG
+    '[com.munhak.api]': DEBUG
+
+Globals:
+  fileStorePath: Y:/weeklymunhak/media
+  fileStoreUriPath: /upload
+  domain:
+    full: http://localhost:8080
+
+common:
+  code:
+    dealGenreCodePid: 34
+    winningPrizeCodePid: 79
+    bookSeriesCodePid: 139
+    channel:
+      bookclubPid: 45
+      dokpaPid: 47
+      homepagePid: 44
+      localBookStorePid: 46
+    sns:
+      instagramPid: 95
+      twitterPid: 96
+      facebookPid: 97
+      blogPid: 98
+    banner:
+      bookclubPid: 126
+      docpaPid: 127
+      homepagePid: 124
+    bannerCategory:
+      topBannerPid : 128
+board:
+  master:
+    noticeCdPid: 1
+    dataroomCdPid: 2
+    prizeCdPid: 3
+    newsletter: 4
